@@ -18,3 +18,7 @@ def register_routes(app,db):
           db.session.commit()
           people = Person.query.all()
           return render_template("index.html",people=people)
+    @app.route('/intro',methods=['GET'])  
+    def start():
+       return render_template("start.html")
+      
