@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Default{% endblock %}</title>
+</head>
+<body>
+    <h1>Index page</h1>
+<ul>
+    {% for person in people %}
+        <li>{{person}}</li>
+    {% endfor %}
+</ul>
+<h3>New person</h3>
+<form action="{{ url_for('index') }}" method="POST">
+    <input type="text" name="name" placeholder="Name" required="required"><br>
+    <input type="number" name=age" placeholder="Age" required="required"><br>
+    <input type="text" name="job" placeholder="Job" required="required"><br>
+    <input type="submit" value="create">
+</form> 
+</body>
+</html>
