@@ -23,4 +23,6 @@ def register_routes(app,db):
     @app.route('/intro',methods=['GET'])  
     def start():
        return render_template("start.html")
-      
+    @app.route("/home")
+    def home():
+       return "This is home page"
