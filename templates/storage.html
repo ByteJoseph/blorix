@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Storage</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="m-4">
+    <h1 class="text-center text-2xl font-bold mb-4">Server Storage</h1>
+    
+    <div class="relative">
+        <span id="ProgressLabel" class="sr-only">Loading</span>
+        
+        <div
+            role="progressbar"
+            aria-labelledby="ProgressLabel"
+            aria-valuenow="{{percentage}}"
+            class="relative block w-full rounded-full bg-gray-200 h-4"
+        >
+            <span
+                class="absolute inset-0 flex items-center justify-center text-xs font-bold text-white"
+            >
+                {{percentage}}%
+            </span>
+            
+            <div
+                class="block h-4 rounded-full bg-indigo-600"
+                style="width: {{percentage}}%"
+            >
+            </div>
+        </div>
+    </div>
+</body>
+</html>
